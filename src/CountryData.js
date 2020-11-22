@@ -27,6 +27,7 @@ const CountryData = () => {
     setData("");
   };
 
+
   const clearInput = () => {
     setInputValue("");
   };
@@ -40,7 +41,20 @@ const CountryData = () => {
         />
         <button type="submit">submit</button>
       </form>
-      {data && <div>{data.cases}</div>}
+ 
+        <div>
+        <h1>{data.country}</h1>
+        <p>Updated: {Date(data.updated)}</p>
+        <p>Total cases: {data.cases}</p>
+        <p>Today cases: {data.todayCases}</p>
+        <p>Total deaths: {data.deaths}</p>
+        <p>Today deaths: {data.todayDeaths}</p>
+        </div>
+        
+        
+       
+        
+  
       {error && <div>{error.message}</div>}
     </div>
   );
