@@ -25,6 +25,7 @@ const CountryData = () => {
     setError("");
     clearInput();
     setData("");
+  
   };
 
 
@@ -42,14 +43,15 @@ const CountryData = () => {
         <button type="submit">submit</button>
       </form>
  
-        <div>
-        <h1>{data.country}</h1>
+      {data && data.country ? (  <div>
+        <h1>{data.country} {data && data.countryInfo ? <img src={`${data.countryInfo.flag}`}/> : ''}</h1>
         <p>Updated: {Date(data.updated)}</p>
         <p>Total cases: {data.cases}</p>
         <p>Today cases: {data.todayCases}</p>
         <p>Total deaths: {data.deaths}</p>
         <p>Today deaths: {data.todayDeaths}</p>
-        </div>
+        </div> ) : ''
+}
         
         
        
