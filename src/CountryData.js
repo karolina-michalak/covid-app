@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Moment from "react-moment";
 import Graph from "./Graph";
+import Form from "./Form";
 
 const CountryData = () => {
   const [inputValue, setInputValue] = useState("");
@@ -46,14 +47,11 @@ const CountryData = () => {
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <button type="submit">submit</button>
-      </form>
+      <Form
+        handleSubmit={handleSubmit}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+      />
 
       {data && data.country ? (
         <div>
