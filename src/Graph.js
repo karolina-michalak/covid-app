@@ -12,8 +12,8 @@ const Graph = (props) => {
   const { chartData } = props;
   return (
     <LineChart
-      width={1000}
-      height={600}
+      width={700}
+      height={300}
       data={
         chartData &&
         chartData.timeline &&

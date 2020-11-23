@@ -1,0 +1,31 @@
+form {
+  padding: 20px 0;
+}
+
+.input {
+  border: 3px solid lightblue;
+  border-radius: 30px;
+  width: 400px;
+  height: 40px;
+  outline: none;
+}
+
+.button {
+  border: 3px solid lightblue;
+  color: white;
+  background: lightblue;
+  border-radius: 30px;
+  width: 90px;
+  height: 45px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0 10px;
+  outline: none;
+}
+
+.button:hover {
+  background: rgb(132, 183, 201);
+  border: 3px solid rgb(132, 183, 201);
+  transition: 0.3s;
+}
